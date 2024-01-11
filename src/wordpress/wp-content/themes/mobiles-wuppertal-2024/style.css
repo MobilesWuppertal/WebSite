@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+/**
+ * Theme Name: Mobiles Wuppertal 2024
+ * Theme URI: https://mobiles-wuppertal.org/
+ * Description:
+ * Version: 1.0.0
+ * Author: Arne Kamola
+ * Author URI: https://arne.kamola.de/
+ * Tags: boilerplate,responsive-layout,microformats,translation-ready
+ * License: GPL 2.0
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+:root {
+	--background:				#FFF;
+	--text:						#222;
+}
+
+@import url('normalize.min.css');
+
+@media screen {
+	* {
+		margin:					0;
+		padding:				0;
+	}
+
+	html {
+		background:				var(--background);
+		color:					var(--text);
+	}
+
+	#jumper {
+		display:				none;
+	}
+
+	div[itemprop=articleBody] .left,
+	div[itemprop=articleBody] .alignleft {
+		float:					left;
+	}
+
+	div[itemprop=articleBody] .right,
+	div[itemprop=articleBody] .alignright {
+		float:					right;
+	}
+
+	div[itemprop=articleBody] img {
+		width:					100%;
+		height:					auto;
+	}
+
+	div[itemprop=articleBody] img.left,
+	div[itemprop=articleBody] img.alignleft {
+		width:					auto;
+		height:					auto;
+	}
+
+	div[itemprop=articleBody] img.right,
+	div[itemprop=articleBody] img.alignright {
+		width:					auto;
+		height:					auto;
+	}
+
+	.wp-smiley {
+		width:					auto !important;
+		height:					auto !important;
+	}
+}
+
+/* Extra small devices, e.g. Phones */
+
+@media only screen and (max-width: 768px) {
+}
+
+/* Small devices, e.g. Tablets */
+
+@media only screen and (min-width: 768px) {
+}
+
+/* Medium devices, e.g. Desktops */
+
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices, e.g. Desktops */
+
+@media only screen and (min-width: 1200px) {
+}
