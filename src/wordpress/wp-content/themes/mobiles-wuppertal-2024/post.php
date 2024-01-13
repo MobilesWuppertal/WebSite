@@ -33,6 +33,21 @@
 		<?php the_content( __('Continue', 'wpblank') ); ?>
 	</div>
 
+	<?php
+		$guidingprinciples = get_the_terms( $post->ID, 'leitbild' );
+
+		if ( $guidingprinciples ):
+	?>
+		<aside class="guidingprinciples">
+			<h1>In unserem Leitbild</h1>
+			<ul>
+				<?php foreach ($guidingprinciples as $principle): ?>
+					<li><?php echo $principle->name; ?></li>
+				<?php endforeach; ?>
+			</ul>
+		</aside>
+	<?php endif; ?>
+
 	<?php if ( has_tag() && is_singular() && !is_page() ): ?>
 		<footer class="meta tags">
 
