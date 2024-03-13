@@ -86,3 +86,383 @@
 
 @media only screen and (min-width: 1200px) {
 }
+
+@font-face {
+  font-family: 'open_sans-regular';
+  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/opensans-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-extrabold';
+  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-italic';
+  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-italic-webfont.woff2') format('woff2'),
+       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat-semibold';
+  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ body {
+  font-size: 1em;
+  font-family: 'open_sans-regular', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+header,main,footer{
+  max-width: 1000px;
+  margin: 5px auto 20px auto;
+}
+
+@media screen and (min-width: 1024px){
+  #id42{
+    background: #333;
+  }
+}
+
+  main {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+
+
+header{
+  margin: 0 auto 20px auto;
+  min-height: 150px;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+  transition: background-color 1s, transform 0.5s;
+}
+
+a:hover {
+  transform: scale(1.05);
+}
+
+p {
+  font-family: 'open_sans-regular';
+  margin-bottom: 1.5em;
+}
+
+h1 {
+  font-family: 'montserrat-extrabold';
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 0;
+  color: rgb(43,150,38);
+}
+
+h2 {
+  font-family: 'montserrat-italic';
+  margin-top: -5px;
+  margin-bottom: 5px;
+  font-size: 2em;
+  font-weight: 300;
+  color:  rgba(118,183,46,1);
+  line-height: 1em;
+}
+
+h3, h4 {
+  font-size: 110%;
+}
+
+h4 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+p{
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+.meta p{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-weight: 500;
+  color: #999;
+  font-style: italic;
+}
+
+
+
+.right{
+  float: right;
+}
+
+
+.gradient{
+background: rgb(43,150,38);
+background: linear-gradient(90deg, rgba(43,150,38,1) 0%, rgba(118,183,46,1) 37%, rgba(243,165,185,1) 60%, rgba(232,65,81,1) 100%);
+height: 5px;
+}
+
+
+header > div.left.logo{
+  padding-top: 30px;
+  padding-left: 0px;
+  width: 250px;
+  display: inline-block;
+  z-index: 100;
+}
+header > div.right{
+  margin-top: 30px;
+}
+
+#sidebar-menu > ul{
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 0 0;
+}
+
+#sidebar-menu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0;
+  margin:  20px 0 0 0;
+
+  display: inline-block;
+  border: 1px solid #fff;
+  padding: 10px 5px 5px 5px;
+  vertical-align: top;
+}
+
+#sidebar-menu > ul > li:last-child{
+  border: 1px solid #E84151;
+  border-radius: 3px;
+}
+
+#sidebar-menu > ul > li > a.text-link{
+  font-family: 'montserrat-semibold';
+  margin: 0px 10px 0 10px;
+  text-transform: uppercase;
+  color: #E84151;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+label{
+  position: relative;
+  display: block;
+}
+
+@media screen and (max-width: 600px){
+  header > div.right{
+    width: 100px;
+  }
+}
+
+label .menu {
+  position: relative;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  background: #FFF;
+  border-radius: 50% 50% 50% 50%;
+  /* -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; */
+  box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+  cursor: pointer;
+}
+
+label .menu .hamburger {
+  position: absolute;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: rgb(232,65,81);
+  display: block;
+  z-index: 100;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+label .menu .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgb(232,65,81);
+}
+label .menu .hamburger:before { top: -10px; }
+label .menu .hamburger:after { bottom: -10px; }
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+
+
+label input { display: none; }
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+  border-radius: 0;
+}
+
+
+
+@media screen and (max-width: 600px){
+  label input + .menu + nav#sidebar-menu{
+    position: relative;
+    display: none;
+    z-index: 101;
+    left: 0;
+  }
+  label input:checked + .menu + nav#sidebar-menu{
+    position: absolute;
+    display: block;
+    z-index: 101;
+    left: calc(100vw * -1 + 100px);
+    width: 500px;
+    top: 100px;
+    right: 0px;
+  }
+  nav#sidebar-menu ul{
+    padding: 0 20px 0 10px;
+
+  }
+  nav#sidebar-menu ul li{
+    width: calc(100vw - 20px);
+    text-align: center;
+  }
+}
+@media screen and (min-width: 601px){
+  label .menu{
+    display: none;
+  }
+}
+
+#sidebar-menu > ul > li > a.text-link:hover{
+  border-bottom: 1px solid rgb(43,150,38);
+  padding-bottom: 3px;
+}
+
+
+@media screen and (max-width: 600px){
+  main > article > div.right{
+    max-width: 100%;
+  }
+
+  main > article > div.right > img{
+    max-width: 100%;
+  }
+}
+
+.sidebar {
+  display: none;
+}
+
+
+footer {
+  padding-top: 50px;
+}
+
+
+footer > div.left{
+  padding: 20px 0 0 0;
+  width: 300px;
+  display: inline-block;
+
+}
+footer > div.left > div{
+  display: inline-block;
+  vertical-align: top;
+}
+
+footer > div.left.logo > div > div > small{
+  font-size: 0.5em;
+}
+
+footer > div.left > div:nth-child(2){
+  margin-left: 20px;
+}
+
+footer > div.right{
+  width: 450px;
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 0.9em;
+}
+@media screen and (max-width: 600px){
+  footer > div.right{
+    width: 100%;
+  }
+}
+
+footer > div.right > nav > ul{
+  list-style: none;
+  padding: 0 0 0 0;
+  margin: 0;
+  width: 145px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@media screen and (max-width: 600px){
+  footer > div.right > nav > ul{
+    width: 100%;
+    margin-left: 130px;
+  }
+}
+
+footer > div.right > nav > ul > li{
+  list-style-type: none;
+  margin: 0;
+  padding: 3px 0;
+}
+
+@media screen and (max-width: 600px){
+  footer > div.right > nav > ul > li{
+    padding: 7px 0;
+  }
+}
+
+footer > div.right > nav > ul > li > a{
+  color: #E84151;
+}
+
+
