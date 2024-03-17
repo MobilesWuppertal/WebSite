@@ -2,3 +2,57 @@
 
 *.sublime-project
 *.sublime-workspace
+
+# IIS
+/src/wordpress/web.config
+
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/src/wordpress/wp-admin/
+/src/wordpress/wp-content/index.php
+/src/wordpress/wp-content/languages
+/src/wordpress/wp-content/plugins/index.php
+/src/wordpress/wp-content/themes/index.php
+/src/wordpress/wp-includes/
+/src/wordpress/index.php
+/src/wordpress/license.txt
+/src/wordpress/readme.html
+/src/wordpress/wp-*.php
+/src/wordpress/xmlrpc.php
+
+# Configuration
+/src/wordpress/wp-config.php
+
+# Example themes
+/src/wordpress/wp-content/themes/twenty*/
+
+# Example plugin
+/src/wordpress/wp-content/plugins/hello.php
+
+# Uploads
+/src/wordpress/wp-content/uploads/
+
+# Log files
+*.log
+
+# htaccess
+/src/wordpress/.htaccess
+
+# All plugins
+#
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+/src/wordpress/wp-content/plugins
+
+# All themes
+#
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
