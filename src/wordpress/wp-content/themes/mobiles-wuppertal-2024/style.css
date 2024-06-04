@@ -89,32 +89,32 @@
 
 @font-face {
   font-family: 'open_sans-regular';
-  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
-       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/opensans-regular-webfont.woff') format('woff');
+  src: url('assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
+       url('assets/fonts/opensans-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'montserrat-extrabold';
-  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
-       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-extrabold-webfont.woff') format('woff');
+  src: url('assets/fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+       url('assets/fonts/montserrat-extrabold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'montserrat-italic';
-  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-italic-webfont.woff2') format('woff2'),
-       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-italic-webfont.woff') format('woff');
+  src: url('assets/fonts/montserrat-italic-webfont.woff2') format('woff2'),
+       url('assets/fonts/montserrat-italic-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'montserrat-semibold';
-  src: url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-semibold-webfont.woff2') format('woff2'),
-       url('/wordpress/wp-content/themes/mobiles-wuppertal-2024/assets/fonts/montserrat-semibold-webfont.woff') format('woff');
+  src: url('assets/fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+       url('assets/fonts/montserrat-semibold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
