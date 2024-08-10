@@ -57,9 +57,3 @@
 	<?php endif; ?>
 
 </article>
-
-<?php if ( !is_page() ): ?>
-
-	<?php comments_template('', true); ?>
-
-<?php endif; ?>
