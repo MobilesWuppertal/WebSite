@@ -10,19 +10,13 @@
  */
 
 ?>
-	<hr>
+  <hr>
 
-	<footer role="contentinfo">
+  <footer role="contentinfo">
     <div class="gradient"></div>
-		<!-- <?php if ( function_exists('dynamic_sidebar') && is_active_sidebar('wpblank-widgetarea-footer') ): ?>
-
-			<?php dynamic_sidebar('wpblank-widgetarea-footer'); ?>
-
-		<?php endif; ?> -->
-
     <div class="left logo">
       <div>
-        <a href="/home">
+        <a href="<?php echo home_url(); ?>">
           <svg height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100" xml:space="preserve">
             <defs>
             <radialGradient id="grad1" gradientTransform="translate(-0.87 -0.14) scale(2, 2)">
@@ -39,50 +33,22 @@
       </div>
       <div>
         <div>
-          Mobiles Wuppertal
+          <?php bloginfo('name'); ?>
         </div>
         <div>
-          <small>B&uuml;ndnis für gemeinwohlorientierte Mobilit&auml;t</small>
+          <small><?php bloginfo('description'); ?></small>
         </div>
       </div>
     </div>
-    <div class="right">
-
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Mitmachen</a>
-          </li>
-          <li>
-            <a href="#">Leitbild</a>
-          </li>
-          <li>
-            <a href="#">Projekte</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Kontakt</a>
-          </li>
-          <li>
-            <a href="#">Impressum</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Twitter</a>
-          </li>
-          <li>
-            <a href="#">Facebook</a>
-          </li>
-          <li>
-            <a href="#">Instagram</a>
-          </li>
-        </ul>
-      </nav>
     </div>
+    <div class="right">
+      <?php if ( function_exists('dynamic_sidebar') && is_active_sidebar('wpblank-widgetarea-footer') ): ?>
 
-	</footer>
+        <?php dynamic_sidebar('wpblank-widgetarea-footer'); ?>
+
+      <?php endif; ?>
+    </div>
+  </footer>
 
 <?php wp_footer(); ?>
 

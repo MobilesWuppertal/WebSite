@@ -13,38 +13,38 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-	<meta charset="<?php bloginfo('charset'); ?>">
+  <meta charset="<?php bloginfo('charset'); ?>">
 
-	<title><?php wp_title($sep = '›', $display = true, $seplocation = 'right'); bloginfo('name'); ?><?php if ( is_front_page() ) { echo ' &#8226; '; bloginfo('description'); } ?></title>
+  <title><?php wp_title($sep = '›', $display = true, $seplocation = 'right'); bloginfo('name'); ?><?php if ( is_front_page() ) { echo ' &#8226; '; bloginfo('description'); } ?></title>
 
-	<meta name="viewport" content="width=device-width, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
 
-	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="all">
+  <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="all">
 
-	<link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url('/'); ?>favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="<?php echo home_url('/'); ?>favicon.ico">
 
-	<link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon.png" rel="apple-touch-icon">
-	<link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
-	<link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
-	<link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+  <link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+  <link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+  <link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
 
-	<meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/msapplication-square-150.png">
-	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/msapplication-square-150.png">
-	<meta name="msapplication-TileColor" content="#FFF">
-	<meta name="application-name" content="<?php bloginfo('name'); ?>">
+  <meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/msapplication-square-150.png">
+  <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/msapplication-square-150.png">
+  <meta name="msapplication-TileColor" content="#FFF">
+  <meta name="application-name" content="<?php bloginfo('name'); ?>">
 
-	<link rel="pavatar" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/pavatar.png">
+  <link rel="pavatar" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/pavatar.png">
 
-	<link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>">
+  <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>">
 
 <?php wp_head(); ?>
 
 </head>
 <body <?php body_class(); ?>>
 
-	<p id="jumper"><a href="#content">[ <?php _e('Jump to content', 'wpblank'); ?> ]</a></p>
+  <p id="jumper"><a href="#content">[ <?php _e('Jump to content', 'wpblank'); ?> ]</a></p>
 
-	<header>
+  <header>
     <div class="gradient"></div>
     <div class="left logo">
       <h1><?php if ( !is_front_page() || is_paged() ): ?><a href="<?php echo home_url(); ?>"><?php endif; ?>
@@ -64,50 +64,24 @@
       </h1>
     </div>
 
-		<div class="right">
-      <?php if ( has_nav_menu('primary') ): ?>
-
-      <?php wp_nav_menu( array(
-        'container' => 'nav',
-        'theme_location' => 'primary'
-      )); ?>
-      <?php endif; ?>
-
-      <!--
+    <div class="right">
+      <?php /*
         We use a `label` element with the `for` attribute
         with the same value as  our label `id` attribute
-      -->
+      */ ?>
       <label id="hamburger-menu" for="hamburger-input">
         <input type="checkbox" id="hamburger-input" class="burger-shower" />
+        <span class="menu"><span class="hamburger"></span></span>
 
-        <span class="menu"> <span class="hamburger"></span> </span>
-
-        <nav id="sidebar-menu">
-          <ul>
-            <li>
-              <a href="/home" class="text-link">
-                <span>Aktuell</span>
-              </a>
-            </li>
-            <li>
-              <a href="/home" class="text-link">
-                <span>Über uns</span>
-              </a>
-            </li>
-            <li>
-              <a href="/home" class="text-link">
-                <span>Projekte</span>
-              </a>
-            </li>
-            <li>
-              <a href="/home" class="text-link">
-                <span>Mitmachen</span>
-              </a>
-            </li>
-          </ul>
-
-        </nav>
+        <?php if ( has_nav_menu('primary') ): ?>
+          <?php wp_nav_menu( array(
+            'container' => 'nav',
+            'container_id' => 'sidebar-menu',
+            'menu_class' => 'primary-menu',
+            'theme_location' => 'primary',
+          )); ?>
+        <?php endif; ?>
       </label>
     </div>
 
-	</header>
+  </header>
