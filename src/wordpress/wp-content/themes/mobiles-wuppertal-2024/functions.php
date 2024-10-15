@@ -168,3 +168,43 @@ function wpblank_wrong_login() {
 	return 'Wrong username or password.';
 }
 add_filter('login_errors', 'wpblank_wrong_login');
+
+/**
+ * Generate snippet for the guided principals of a post.
+ * @param int	$postID	ID of the post.
+ * @since mobwtal 1.0.0
+ */
+function mobwtal_guidingprinciples($postID) {
+	// Get guiding principles of post
+	$gp_post = get_the_terms( $postID, 'leitbild' );
+
+	if ( $gp_post ):
+		// Get all guiding principles
+		$gp = get_terms( array(
+			'taxonomy'		=> 'leitbild',
+			'hide_empty'	=> false,
+		));
+?>
+	<aside class="guidingprinciples">
+		<h1><?php _e('In unserem Leitbild', 'mobwtal'); ?></h1>
+		<ul>
+			<?php
+				foreach ($gp as $principle):
+					$is_current_principle = false;
+
+					foreach ($gp_post as $current_principle) {
+						if ( $current_principle->term_id === $principle->term_id ) {
+							$is_current_principle = true;
+						}
+					}
+			?>
+				<li<?php if ( $is_current_principle ) { echo ' class="active"'; } ?>><a href="<?php echo get_term_link( $principle->slug, 'leitbild' ); ?>"><?php echo $principle->name; ?></a></li>
+			<?php
+				$is_current_principle = false;
+				endforeach;
+			?>
+		</ul>
+	</aside>
+<?php
+	endif;
+}
