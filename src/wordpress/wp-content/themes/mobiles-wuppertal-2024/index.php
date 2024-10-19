@@ -19,6 +19,22 @@ get_header(); ?>
 
 			<h1><?php single_cat_title(); ?></h1>
 
+			<aside class="taxonomy-description">
+				<?php the_archive_description(); ?>
+			</aside>
+
+			<h2>Alle Inhalte dazu:</h2>
+
+		<?php elseif ( is_tax('leitbild') ): ?>
+
+			<h1><?php single_cat_title(); ?></h1>
+
+			<aside class="taxonomy-description">
+				<?php the_archive_description(); ?>
+			</aside>
+
+			<h2>Alle Inhalte dazu:</h2>
+
 		<?php elseif ( is_tag() ): ?>
 
 			<h1><?php _e('Tag', 'wpblank'); ?>: <?php single_tag_title(); ?></h1>

@@ -52,7 +52,7 @@
     font: 900 3em 'Montserrat', sans-serif;
     line-height: 1em;
     text-transform: uppercase;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   h2 {
@@ -60,30 +60,30 @@
     color:  var(--headline2);
     font: 400 2em 'Montserrat', sans-serif;
     line-height: 1em;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   h3 {
     font: 400 1.6em 'Montserrat', sans-serif;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   h4 {
     font: 400 1.4em 'Montserrat', sans-serif;
     letter-spacing: .025em;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   h5 {
     font: 500 1.2em 'Montserrat', sans-serif;
     letter-spacing: .025em;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   h6 {
     font: 600 1em 'Montserrat', sans-serif;
     letter-spacing: .033em;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   p {
@@ -166,12 +166,12 @@
     margin: 5px auto 20px auto;
   }
 
-  header {
+  body > header {
     min-height: 150px;
     margin-top: 0;
   }
 
-  footer {
+  body > footer {
     padding-top: 50px;
   }
 
@@ -194,6 +194,34 @@
     height: 5px;
     background: var(--headline1);
     background: linear-gradient(90deg, var(--headline1) 0%, var(--headline2) 37%, var(--light-pink) 60%, var(--pink) 100%);
+  }
+
+  /* Overviews */
+
+  main > h1 {
+    background: transparent;
+    color: var(--headline2);
+  }
+
+  .taxonomy-description {
+    margin-bottom: 50px;
+    max-width: 42rem;
+    font: italic 500 1.4em 'Montserrat', sans-serif;
+    color: var(--text);
+  }
+
+  main > .taxonomy-description::after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin-top: 25px;
+    background: var(--headline1);
+    background: linear-gradient(90deg, var(--headline1) 0%, var(--headline2) 37%, var(--light-pink) 60%, var(--pink) 100%);
+  }
+
+  main > h2 {
+    margin-bottom: 50px;
   }
 
   /* Content */
@@ -241,6 +269,29 @@
 
   /* Article */
 
+  article {
+    margin-bottom: 100px;
+  }
+
+  .single article {
+    margin-bottom: 50px;
+  }
+
+  article h1 a {
+    background: transparent;
+    color: var(--headline1);
+    text-decoration: underline;
+    transition: color .3s;
+  }
+
+  article h1 a:active,
+  article h1 a:focus,
+  article h1 a:hover {
+    background: transparent;
+    color: var(--headline2);
+    text-decoration: none;
+  }
+
   .meta {
     position: relative;
     margin: 1em 0;
@@ -264,7 +315,7 @@
 
   div[itemprop=articleBody] {
     max-width: 42em;
-    word-break: break-all;
+    word-break: break-word;
   }
 
   div[itemprop=articleBody] h1,
@@ -274,6 +325,12 @@
   div[itemprop=articleBody] h5,
   div[itemprop=articleBody] h6 {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 0 24px;
   }
 }
 
