@@ -21,6 +21,7 @@
   --headline2:      rgba(118, 183,  46, 1);
   --light-pink:     rgba(243, 165, 185, 1);
   --pink:           rgba(232,  65,  81, 1);
+  --pink-light:     rgba(243, 165, 185, 1);
 }
 
 @import url('normalize.min.css');
@@ -357,33 +358,53 @@ header > div.left.logo{
 #sidebar-menu > ul {
   list-style: none;
   margin: 0;
-  padding: 0 10px 0 0;
+  padding: 0;
 }
 
 #sidebar-menu ul li {
   list-style-type: none;
   display: inline-block;
   padding: 0;
-  margin:  20px 0 0 0;
-
-  display: inline-block;
+  margin:  20px 10px 0;
   border: 1px solid #fff;
-  padding: 10px 5px 5px 5px;
   vertical-align: top;
+  line-height: 1;
 }
 
 #sidebar-menu > ul > li:last-child {
-  border: 1px solid var(--pink);
-  border-radius: 3px;
+  margin-right: 0;
 }
 
-#sidebar-menu > ul > li > a.text-link {
+#sidebar-menu > ul > li > a {
+  display: block;
+  padding: 10px 0;
   font-family: 'Montserrat', sans-serif;
-  margin: 0px 10px 0 10px;
   text-transform: uppercase;
   color: var(--pink);
   font-weight: 500;
-  padding-bottom: 4px;
+  letter-spacing: .05em;
+}
+
+#sidebar-menu > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+#sidebar-menu > ul > li:last-child a {
+  padding: 10px;
+  border: 2px solid var(--pink-light);
+  border-radius: 3px;
+}
+
+#sidebar-menu > ul > li.current_page_item:last-child a,
+#sidebar-menu > ul > li:last-child a:hover {
+  border-color: var(--pink);
+  background: var(--pink);
+  color: #FFF;
+  text-decoration: none;
+}
+
+#sidebar-menu .current_page_item a {
+  border-bottom: 2px solid var(--headline2);
 }
 
 label {
