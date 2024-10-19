@@ -40,7 +40,7 @@
 	<?php if ( has_tag() && is_singular() && !is_page() ): ?>
 		<footer class="meta tags">
 
-			<?php the_tags( __('Tags:'), '<span class="sep">, </span>' ); ?>
+			<p><?php the_tags( __('Tags: '), '<span class="sep">, </span>' ); ?></p>
 
 		</footer>
 	<?php endif; ?>
