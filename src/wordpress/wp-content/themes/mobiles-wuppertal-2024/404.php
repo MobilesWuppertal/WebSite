@@ -11,20 +11,20 @@
 
 get_header(); ?>
 
-	<div id="content" role="main">
+	<main id="content">
 
 		<article class="page error404">
 
-			<h1><?php _e('Page not found', 'wpblank'); ?></h1>
-
-			<p><!-- Insert your error message here --></p>
+			<header>
+				<h1><?php _e('Seite nicht gefunden', 'wpblank'); ?></h1>
+			</header>
 
 			<p><code class="error"><?php _e('Error Code 404', 'wpblank'); ?></code></p>
 
+			<p><?php _e('Der gesuchte Inhalte konnte leider nicht gefunden werden.', 'wpblank'); ?></p>
+
 		</article>
 
-	</div>
-
-<?php get_sidebar(); ?>
+	</main>
 
 <?php get_footer(); ?>

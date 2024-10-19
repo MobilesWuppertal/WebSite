@@ -230,11 +230,18 @@
   div[itemprop=articleBody] .left,
   div[itemprop=articleBody] .alignleft {
     float: left;
+    margin: 5px 20px 10px 0;
   }
 
   div[itemprop=articleBody] .right,
   div[itemprop=articleBody] .alignright {
     float: right;
+    margin: 5px 0 20px 20px;
+  }
+
+  div[itemprop=articleBody] .aligncenter {
+    display: block;
+    margin: 0 auto 20px;
   }
 
   div[itemprop=articleBody] img {
@@ -246,6 +253,14 @@
   div[itemprop=articleBody] img.alignleft {
     width: auto;
     height: auto;
+    margin: 5px 20px 10px 0;
+  }
+
+  div[itemprop=articleBody] img.aligncenter {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
   }
 
   div[itemprop=articleBody] img.right,
@@ -263,6 +278,27 @@
     max-width: 100%;
   }
 
+  figcaption {
+    position: relative;
+    margin: 10px 0 0;
+    padding-left: 30px;
+    background: transparent;
+    color: var(--text-metadata);
+    font-size: .9em;
+    line-height: 1.2em;
+    font-weight: 500;
+  }
+
+  figcaption::before {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: .6em;
+    display: block;
+    width: 20px;
+    border-bottom: 2px solid var(--text-metadata);
+  }
+
   .wp-smiley {
     width: auto !important;
     height: auto !important;
@@ -271,6 +307,7 @@
   /* Article */
 
   article {
+    position: relative;
     margin-bottom: 100px;
   }
 
@@ -294,6 +331,7 @@
   }
 
   .meta {
+    clear: both;
     position: relative;
     margin: 1em 0;
   }
@@ -314,8 +352,19 @@
     font-weight: 500;
   }
 
+  article .post-image {
+    float: right;
+    width: calc(100% - 42rem);
+  }
+
+  article .post-image img {
+    width: aut0;
+    max-width: 100%;
+    height: auto;
+  }
+
   div[itemprop=articleBody] {
-    max-width: 42em;
+    max-width: 40em;
     word-break: break-word;
   }
 
@@ -326,6 +375,13 @@
   div[itemprop=articleBody] h5,
   div[itemprop=articleBody] h6 {
     margin-bottom: 20px;
+  }
+
+  div[itemprop=articleBody] li,
+  div[itemprop=articleBody] dt,
+  div[itemprop=articleBody] dd,
+  div[itemprop=articleBody] p {
+    line-height: 1.8em;
   }
 }
 
@@ -386,7 +442,8 @@ header > div.left.logo{
 }
 
 #sidebar-menu > ul > li > a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 2px solid var(--headline2);
 }
 
 #sidebar-menu > ul > li:last-child a {
@@ -534,6 +591,7 @@ label input:checked + .menu {
 .pagination .inner li {
   width: 45%;
   line-height: 1.5em;
+  word-break: break-word;
 }
 
 .pagination .prev {
