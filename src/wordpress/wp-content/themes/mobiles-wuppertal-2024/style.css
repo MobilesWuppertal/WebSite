@@ -468,7 +468,6 @@ label input:checked + .menu {
     display: block;
     z-index: 101;
     left: calc(100vw * -1 + 100px);
-    width: 500px;
     top: 100px;
     right: 0px;
   }
