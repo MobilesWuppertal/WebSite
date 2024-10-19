@@ -11,9 +11,7 @@
 
 ?><article id="post-<?php the_ID(); ?>" itemtype="http://schema.org/BlogPosting" itemscope="" <?php post_class(); ?>>
 
-	<?php if ( !is_page() ): ?>
-		<header>
-	<?php endif; ?>
+	<header>
 
 		<h1 itemprop="name headline"><?php if ( !is_singular() ): ?><a href="<?php the_permalink(); ?>" itemprop="url" rel="bookmark"><?php endif; ?><?php the_title(); ?><?php if ( !is_singular() ): ?></a><?php endif; ?></h1>
 
@@ -25,9 +23,11 @@
 			</aside>
 		<?php endif; ?>
 
-	<?php if ( !is_page() ): ?>
-		</header>
-	<?php endif; ?>
+	</header>
+
+	<div class="post-image">
+		<?php the_post_thumbnail(); ?>
+	</div>
 
 	<div itemprop="articleBody">
 		<?php the_content( __('Continue', 'wpblank') ); ?>

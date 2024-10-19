@@ -91,6 +91,7 @@ add_action( 'wp_enqueue_scripts', 'wpblank_js' );
 function wpblank_support() {
 	// Features
 	// @see http://codex.wordpress.org/Function_Reference/add_theme_support#Addable_Features
+	add_theme_support( 'post-thumbnails' );
 
 	// HTML5
 	// @see http://codex.wordpress.org/Function_Reference/add_theme_support#HTML5
