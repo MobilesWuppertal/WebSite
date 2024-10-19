@@ -16,6 +16,7 @@
   --background:     #FFF;
   --text:           #222;
   --text-metadata:  #000;
+  --text-footer:    #888;
   --headline1:      rgba( 43, 150,  38, 1);
   --headline2:      rgba(118, 183,  46, 1);
   --light-pink:     rgba(243, 165, 185, 1);
@@ -457,77 +458,103 @@ label input:checked + .menu {
 
 /* Footer */
 
-@media screen and (max-width: 600px) {
-  main > article > div.right{
-    max-width: 100%;
-  }
-
-  main > article > div.right > img{
-    max-width: 100%;
-  }
+body > footer {
+  font-size: 0.9em;
+  background: transparent;
+  color: var(--text-footer);
 }
 
-footer > div.left {
+body > footer::before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: var(--headline1);
+  background: linear-gradient(90deg, var(--headline1) 0%, var(--headline2) 37%, var(--light-pink) 60%, var(--pink) 100%);
+}
+
+body > footer .inner {
+  display: flex;
+  justify-content: space-between
+}
+
+body > footer .left {
+  display: flex;;
   padding: 20px 0 0 0;
-  width: 300px;
-  display: inline-block;
 }
-footer > div.left > div {
+
+body > footer .left > div {
   display: inline-block;
   vertical-align: top;
 }
 
-footer > div.left.logo > div > div > small {
-  font-size: 0.5em;
-}
-
-footer > div.left > div:nth-child(2) {
+body > footer .left > div:nth-child(2) {
   margin-left: 20px;
 }
 
-footer > div.right {
-  width: 450px;
+body > footer .right {
+  display: flex;
+  justify-content: space-between;
   margin-top: 15px;
-  display: inline-block;
-  font-size: 0.9em;
 }
 
-@media screen and (max-width: 600px) {
-  footer > div.right {
-    width: 100%;
-  }
+body > footer .bloginfo {
+  letter-spacing: 0.025;
 }
 
-footer > div.right > nav > ul {
+body > footer .bloginfo .name {
+  display: block;
+  font-weight: 600;
+}
+
+body > footer .bloginfo .description {
+  display: block;
+}
+
+body > footer .widget {
+  margin-left: 24px;
+}
+
+body > footer .widget::first-child {
+  margin-left: 0;
+}
+
+body > footer .widget ul {
   list-style: none;
-  padding: 0 0 0 0;
-  margin: 0;
-  width: 145px;
-  display: inline-block;
-  vertical-align: top;
+  margin-left: 0;
+}
+
+body > footer .widget li {
+  line-height: 1.5em;
+}
+
+body > footer .widget a {
+  background: transparent;
+  color: var(--text-footer);
+  text-decoration: underline;
+}
+
+body > footer .widget a:hover {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
-  footer > div.right > nav > ul {
-    width: 100%;
-    margin-left: 130px;
+  body > footer .inner {
+    padding: 0 24px;
   }
-}
 
-footer > div.right > nav > ul > li {
-  list-style-type: none;
-  margin: 0;
-  padding: 3px 0;
-}
+  body > footer .inner,
+  body > footer .right {
+    flex-direction: column;
+  }
 
-@media screen and (max-width: 600px) {
   footer > div.right > nav > ul > li {
     padding: 7px 0;
   }
-}
 
-footer > div.right > nav > ul > li > a{
-  color: var(--pink);
+  body > footer .widget {
+    margin-left: 0;
+  }
 }
 
 /* Guiding Principles */
