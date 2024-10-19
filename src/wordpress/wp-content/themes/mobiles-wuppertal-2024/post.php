@@ -33,7 +33,9 @@
 		<?php the_content( __('Continue', 'wpblank') ); ?>
 	</div>
 
-	<?php mobwtal_guidingprinciples( $post->ID ); ?>
+	<?php if ( is_singular() ) {
+		mobwtal_guidingprinciples( $post->ID );
+	} ?>
 
 	<?php if ( has_tag() && is_singular() && !is_page() ): ?>
 		<footer class="meta tags">
