@@ -20,7 +20,7 @@
 		<?php if ( !is_page() ): ?>
 			<aside class="meta">
 
-				<p><time datetime="<?php echo get_the_date('Y-m-d\TH:m'); ?>" itemprop="datePublished"><span class="date"><?php echo get_the_date( get_option('date_format') ); ?></span>, <span class="time"><?php the_time( get_option('time_format') ); ?></span></time> · <?php _e('by', 'wpblank') ?> <span itemtype="http://schema.org/Person" itemscope="" itemprop="author"><span itemprop="name"><?php the_author(); ?></span></span> · <?php _e('Categories', 'wpblank'); ?>: <span itemprop="articleSection"><?php the_category(', '); ?></span><?php if ( comments_open() ) : ?> · <?php comments_popup_link( __('<span class="count">0 <span>Comments</span></span>', 'wpblank'), __('<span class="count">1 <span>Comment</span></span>', 'wpblank'), __('<span class="count">% <span>Comments</span></span>', 'wpblank'), $css_class = 'comments'); endif; ?></p>
+				<p><time datetime="<?php echo get_the_date('Y-m-d\TH:m'); ?>" itemprop="datePublished"><span class="date"><?php echo get_the_date( get_option('date_format') ); ?></span>, <span class="time"><?php the_time( get_option('time_format') ); ?></span></time> · <?php _e('von', 'wpblank') ?> <span itemtype="http://schema.org/Person" itemscope="" itemprop="author"><span itemprop="name"><?php the_author(); ?></span></span> · <?php _e('Kategorien', 'wpblank'); ?>: <span itemprop="articleSection"><?php the_category(', '); ?></span><?php if ( comments_open() ) : ?> · <?php comments_popup_link( __('<span class="count">0 <span>Comments</span></span>', 'wpblank'), __('<span class="count">1 <span>Comment</span></span>', 'wpblank'), __('<span class="count">% <span>Comments</span></span>', 'wpblank'), $css_class = 'comments'); endif; ?></p>
 
 			</aside>
 		<?php endif; ?>
