@@ -13,13 +13,13 @@
  */
 
 :root {
-	--background:			#FFF;
-	--text:						#222;
-	--text-metadata:	#999;
-	--headline1:			rgb(43,150,38);
-	--headline2:			rgba(118,183,46,1);
-	--light-pink:			rgba(243,165,185,1);
-	--pink:			rgba(232,65,81,1);
+  --background:     #FFF;
+  --text:           #222;
+  --text-metadata:  #000;
+  --headline1:      rgba( 43, 150,  38, 1);
+  --headline2:      rgba(118, 183,  46, 1);
+  --light-pink:     rgba(243, 165, 185, 1);
+  --pink:           rgba(232,  65,  81, 1);
 }
 
 @import url('normalize.min.css');
@@ -27,263 +27,171 @@
 @import url('assets/fonts/OpenSans/OpenSans.css');
 
 @media screen {
-	* {
-		margin:					0;
-		padding:				0;
-	}
-
-	html {
-		background:			var(--background);
-		color:					var(--text);
-	}
-
-	#jumper {
-		display:				none;
-	}
-
-	div[itemprop=articleBody] .left,
-	div[itemprop=articleBody] .alignleft {
-		float:					left;
-	}
-
-	div[itemprop=articleBody] .right,
-	div[itemprop=articleBody] .alignright {
-		float:					right;
-	}
-
-	div[itemprop=articleBody] img {
-		width:					100%;
-		height:					auto;
-	}
-
-	div[itemprop=articleBody] img.left,
-	div[itemprop=articleBody] img.alignleft {
-		width:					auto;
-		height:					auto;
-	}
-
-	div[itemprop=articleBody] img.right,
-	div[itemprop=articleBody] img.alignright {
-		width:					auto;
-		height:					auto;
-	}
-
-	.wp-smiley {
-		width:					auto !important;
-		height:					auto !important;
-	}
-
-  img.alignright {
-    margin-top: 5px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-}
 
-/* Extra small devices, e.g. Phones */
+  html {
+    background: var(--background);
+    color: var(--text);
+  }
 
-@media only screen and (max-width: 768px) {
-}
+  body {
+    font: 1em 'OpenSans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+  }
 
-/* Small devices, e.g. Tablets */
-
-@media only screen and (min-width: 768px) {
-}
-
-/* Medium devices, e.g. Desktops */
-
-@media only screen and (min-width: 768px) {
-}
-
-/* Large devices, e.g. Desktops */
-
-@media only screen and (min-width: 1200px) {
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
- body {
-  font-size: 1em;
-  font-family: 'OpenSans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: var(--text);
-  background-color: var(--background);
-}
-
-header,main,footer{
-  max-width: 1000px;
-  margin: 5px auto 20px auto;
-}
-
-hr{
-  display: none;
-}
-
-#comments,
-.comments {
-  display: none;
-}
-
-/*.guidingprinciples {
-  margin-top: 20px;
-  margin-bottom: 20px;
-
-  & > h1 {
-    font-family: 'montserrat-extrabold';
-    font-size: 1.2em;
-    font-weight: 900;
-    text-transform: uppercase;
-    margin-top: 5px;
-    margin-bottom: 0;
+  h1 {
+    margin: 5px 0 0;
+    background: transparent;
     color: var(--headline1);
+    font: 900 3em 'Montserrat', sans-serif;
+    line-height: 1em;
+    text-transform: uppercase;
   }
 
-  & > ul {
-
-
-    & > li {
-      list-style: none;
-    }
-
+  h2 {
+    font: 300 2em 'Montserrat', sans-serif;
+    background: transparent;
+    color:  var(--headline2);
+    line-height: 1em;
   }
-}*/
 
-article > div > ul {
-  margin-left: 25px;
-}
+  h3 {
+    font: 400 1.6em 'Montserrat', sans-serif;
+  }
 
+  h4 {
+    font-style: italic;
+  }
 
+  p {
+    margin-bottom: 1.5em;
+    line-height: 1.5em;
+  }
 
-.pagination{
-  & > ul {
+  hr {
+    display: none;
+  }
+
+  a {
+    display: inline-block;
+    background: transparent;
+    color: var(--pink);
+    text-decoration: underline;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  /* Side Structure */
+
+  header,
+  main,
+  footer {
+    max-width: 1000px;
+    margin: 5px auto 20px auto;
+  }
+
+  header {
+    min-height: 150px;
+    margin-top: 0;
+  }
+
+  footer {
+    padding-top: 50px;
+  }
+
+  header .right,
+  footer .right {
+    float: right;
+  }
+
+  #jumper {
+    display: none;
+  }
+
+  /* Design Elements */
+
+  .gradient {
+    height: 5px;
+    background: var(--headline1);
+    background: linear-gradient(90deg, var(--headline1) 0%, var(--headline2) 37%, var(--light-pink) 60%, var(--pink) 100%);
+  }
+
+  /* Content */
+
+  div[itemprop=articleBody] .left,
+  div[itemprop=articleBody] .alignleft {
+    float: left;
+  }
+
+  div[itemprop=articleBody] .right,
+  div[itemprop=articleBody] .alignright {
+    float: right;
+  }
+
+  div[itemprop=articleBody] img {
     width: 100%;
-    margin-top: 20px;
-    & > li {
-      list-style: none;
-      display: block;
+    height: auto;
+  }
 
-      &.prev {
-        float: left;
-      }
+  div[itemprop=articleBody] img.left,
+  div[itemprop=articleBody] img.alignleft {
+    width: auto;
+    height: auto;
+  }
 
-      &.next {
-        float: right;
-      }
+  div[itemprop=articleBody] img.right,
+  div[itemprop=articleBody] img.alignright {
+    width: auto;
+    height: auto;
+    margin: 5px 0 20px 20px;
+  }
 
-    }
+  .wp-smiley {
+    width: auto !important;
+    height: auto !important;
+  }
 
+  /* Article */
+
+  article div[itemprop=articleBody] {
+    max-width: 42em;
+  }
+
+  .meta p {
+    margin: 1em 0;
+    font-weight: 500;
+    color: var(--text-metadata);
   }
 }
 
-@media screen and (min-width: 1024px){
-  #id42{
-    background: var(--text);
-  }
-}
-
-  main {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-
-
-header{
-  margin: 0 auto 20px auto;
-  min-height: 150px;
-}
-
-a {
-  display: inline-block;
-  color: var(--pink);
-  text-decoration: underline;
-  transition: background-color 1s, transform 0.5s;
-}
-
-a:hover {
-  transform: scale(1.05);
-}
-
-p {
-  margin-bottom: 1.5em;
-}
-
-nav#sidebar-menu > ul > li > a {
-  text-decoration: none;
-}
-
-
-header > h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3em;
-  font-weight: 900;
-  text-transform: uppercase;
-  margin-top: 5px;
-  margin-bottom: 0;
-  color: var(--headline1);
-}
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  margin-top: -5px;
-  margin-bottom: 5px;
-  font-size: 2em;
-  font-weight: 300;
-  color:  var(--headline2);
-  line-height: 1em;
-}
-
-h3, h4 {
-  font-size: 110%;
-}
-
-h4 {
-  font-weight: normal;
-  font-style: italic;
-}
-
-p{
-  line-height: 1.5em;
-  font-weight: 400;
-}
-
-.meta p{
-  margin-top: 1em;
-  margin-bottom: 1em;
-  font-weight: 500;
-  color: var(--text-metadata);
-  font-style: italic;
-}
-
-
-
-.right{
-  float: right;
-}
-
-
-.gradient{
-background: var(--headline1);
-background: linear-gradient(90deg, var(--headline1) 0%, var(--headline2) 37%, var(--light-pink) 60%, var(--pink) 100%);
-height: 5px;
-}
-
+/* Header */
 
 header > div.left.logo{
+  z-index: 100;
+  display: inline-block;
+  width: 250px;
   padding-top: 30px;
   padding-left: 0px;
-  width: 250px;
-  display: inline-block;
-  z-index: 100;
 }
-header > div.right{
+
+/* Main Menu */
+
+.main-menu {
   margin-top: 30px;
 }
 
-#sidebar-menu > ul{
+.main-menu a {
+  text-decoration: none;
+}
+
+#sidebar-menu > ul {
   list-style: none;
   margin: 0;
   padding: 0 10px 0 0;
@@ -301,12 +209,12 @@ header > div.right{
   vertical-align: top;
 }
 
-#sidebar-menu > ul > li:last-child{
+#sidebar-menu > ul > li:last-child {
   border: 1px solid var(--pink);
   border-radius: 3px;
 }
 
-#sidebar-menu > ul > li > a.text-link{
+#sidebar-menu > ul > li > a.text-link {
   font-family: 'Montserrat', sans-serif;
   margin: 0px 10px 0 10px;
   text-transform: uppercase;
@@ -315,12 +223,12 @@ header > div.right{
   padding-bottom: 4px;
 }
 
-label{
+label {
   position: relative;
   display: block;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   header > div.right{
     width: 100px;
   }
@@ -379,24 +287,20 @@ label input:checked + .menu .hamburger:before {
   top: 0;
 }
 
-
-
 label input { display: none; }
 label input:checked + .menu {
   box-shadow: 0 0 0 100vw var(--background), 0 0 0 100vh var(--background);
   border-radius: 0;
 }
 
-
-
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   label input + .menu + nav#sidebar-menu{
     position: relative;
     display: none;
     z-index: 101;
     left: 0;
   }
-  label input:checked + .menu + nav#sidebar-menu{
+  label input:checked + .menu + nav#sidebar-menu {
     position: absolute;
     display: block;
     z-index: 101;
@@ -405,28 +309,50 @@ label input:checked + .menu {
     top: 100px;
     right: 0px;
   }
-  nav#sidebar-menu ul{
+  nav#sidebar-menu ul {
     padding: 0 20px 0 10px;
 
   }
-  nav#sidebar-menu ul li{
+  nav#sidebar-menu ul li {
     width: calc(100vw - 20px);
     text-align: center;
   }
 }
-@media screen and (min-width: 601px){
+@media screen and (min-width: 601px) {
   label .menu{
     display: none;
   }
 }
 
-#sidebar-menu > ul > li > a.text-link:hover{
+#sidebar-menu > ul > li > a.text-link:hover {
   border-bottom: 1px solid var(--headline1);
   padding-bottom: 3px;
 }
 
+/* Pagination */
 
-@media screen and (max-width: 600px){
+.pagination {
+  & > ul {
+    width: 100%;
+    margin-top: 20px;
+
+    & > li {
+      list-style: none;
+      display: block;
+
+      &.prev {
+        float: left;
+      }
+      &.next {
+        float: right;
+      }
+    }
+  }
+}
+
+/* Footer */
+
+@media screen and (max-width: 600px) {
   main > article > div.right{
     max-width: 100%;
   }
@@ -436,48 +362,38 @@ label input:checked + .menu {
   }
 }
 
-.sidebar {
-  display: none;
-}
-
-
-footer {
-  padding-top: 50px;
-}
-
-
-footer > div.left{
+footer > div.left {
   padding: 20px 0 0 0;
   width: 300px;
   display: inline-block;
-
 }
-footer > div.left > div{
+footer > div.left > div {
   display: inline-block;
   vertical-align: top;
 }
 
-footer > div.left.logo > div > div > small{
+footer > div.left.logo > div > div > small {
   font-size: 0.5em;
 }
 
-footer > div.left > div:nth-child(2){
+footer > div.left > div:nth-child(2) {
   margin-left: 20px;
 }
 
-footer > div.right{
+footer > div.right {
   width: 450px;
   margin-top: 15px;
   display: inline-block;
   font-size: 0.9em;
 }
-@media screen and (max-width: 600px){
-  footer > div.right{
+
+@media screen and (max-width: 600px) {
+  footer > div.right {
     width: 100%;
   }
 }
 
-footer > div.right > nav > ul{
+footer > div.right > nav > ul {
   list-style: none;
   padding: 0 0 0 0;
   margin: 0;
@@ -486,21 +402,21 @@ footer > div.right > nav > ul{
   vertical-align: top;
 }
 
-@media screen and (max-width: 600px){
-  footer > div.right > nav > ul{
+@media screen and (max-width: 600px) {
+  footer > div.right > nav > ul {
     width: 100%;
     margin-left: 130px;
   }
 }
 
-footer > div.right > nav > ul > li{
+footer > div.right > nav > ul > li {
   list-style-type: none;
   margin: 0;
   padding: 3px 0;
 }
 
-@media screen and (max-width: 600px){
-  footer > div.right > nav > ul > li{
+@media screen and (max-width: 600px) {
+  footer > div.right > nav > ul > li {
     padding: 7px 0;
   }
 }
@@ -514,6 +430,7 @@ footer > div.right > nav > ul > li > a{
 .guidingprinciples {
   display: flex;
   align-items: flex-start;
+  margin: 50px 0;
 }
 
 .guidingprinciples a {
@@ -521,10 +438,12 @@ footer > div.right > nav > ul > li > a{
 }
 
 .guidingprinciples h1 {
-  border-bottom: 3px solid #2B9626;
+  margin: 0;
+  padding-bottom: 2px;
+  border-bottom: 3px solid var(--headline1);
   background: transparent;
   color: #000;
-  font: 600 16px 'Montserrat', sans-serif;
+  font: 600 1em/1.6 'Montserrat', sans-serif;
   text-transform: unset;
 }
 
@@ -538,7 +457,7 @@ footer > div.right > nav > ul > li > a{
 .guidingprinciples h1 a:focus,
 .guidingprinciples h1 a:hover {
   background: transparent;
-  color: #2B9626;
+  color: var(--headline1);
 }
 
 .guidingprinciples .devider {
@@ -552,17 +471,17 @@ footer > div.right > nav > ul > li > a{
   content: '';
   position: absolute;
   left: -1px;
-  bottom: 0px;
-  width: 115%;
+  bottom: -6px;
+  width: 110%;
   height: 3px;
-  background-color: #2B9626;
+  background-color: var(--headline1);
   transform: rotate(45deg);
   transform-origin: 1px 1px;
 }
 
 .guidingprinciples .principleslist {
   display: flex;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: -7px;
   list-style: none;
 }
@@ -586,7 +505,7 @@ footer > div.right > nav > ul > li > a{
 .guidingprinciples .principleslist li {
   position: relative;
   width: 45px;
-  border-bottom: 3px solid #2B9626;
+  border-bottom: 3px solid var(--headline1);
   line-height: 1.2em;
   text-align: center;
 }
@@ -599,7 +518,7 @@ footer > div.right > nav > ul > li > a{
   display: block;
   width: 10px;
   height: 15px;
-  border-right: 3px solid #2B9626;
+  border-right: 3px solid var(--headline1);
 }
 
 .guidingprinciples .principleslist li a {
@@ -625,7 +544,7 @@ footer > div.right > nav > ul > li > a{
   min-width: 108px;
   padding: 8px 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
-  background: #2B9626;
+  background: var(--headline1);
   background: linear-gradient(135deg, rgba(43,150,38,1) 0%, rgba(118,183,46,1) 100%);
   color: #FFF;
   text-decoration: none;
@@ -641,7 +560,7 @@ footer > div.right > nav > ul > li > a{
   z-index: 0;
   width: 100%;
   padding: 8px;
-  background: #2B9626;
+  background: var(--headline1);
 /*  background: linear-gradient(135deg, rgba(43,150,38,1) 0%, rgba(118,183,46,1) 100%);*/
   color: #FFF;
   text-decoration: none;
@@ -676,7 +595,7 @@ footer > div.right > nav > ul > li > a{
     position: relative;
     width: unset;
     border-bottom: 0 none;
-    border-left: 3px solid #2B9626;
+    border-left: 3px solid var(--headline1);
     text-align: left;
   }
 
@@ -691,7 +610,7 @@ footer > div.right > nav > ul > li > a{
     left: -9px;
     right: unset;
     width: 15px;
-    border-bottom: 3px solid #2B9626;
+    border-bottom: 3px solid var(--headline1);
     border-right: 0 none;
   }
 
@@ -700,7 +619,7 @@ footer > div.right > nav > ul > li > a{
     left: -9px;
     right: unset;
     width: 15px;
-    border-bottom: 3px solid #2B9626;
+    border-bottom: 3px solid var(--headline1);
     border-right: 0 none;
   }
 
@@ -730,7 +649,7 @@ footer > div.right > nav > ul > li > a{
   .guidingprinciples .principleslist li:focus a .principle-name,
   .guidingprinciples .principleslist li:hover a .principle-name {
     background: transparent;
-    color: #2B9626;
+    color: var(--headline1);
   }
 
   .guidingprinciples .principleslist li:hover a .principle-number {
@@ -738,6 +657,6 @@ footer > div.right > nav > ul > li > a{
     width: auto;
     padding: 0;
     background: transparent;
-    color: #2B9626;
+    color: var(--headline1);
   }
 }

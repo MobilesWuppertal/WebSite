@@ -64,7 +64,7 @@
       </h1>
     </div>
 
-    <div class="right">
+    <div class="main-menu right">
       <?php /*
         We use a `label` element with the `for` attribute
         with the same value as  our label `id` attribute
