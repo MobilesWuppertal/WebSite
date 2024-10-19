@@ -24,6 +24,7 @@
 
 @import url('normalize.min.css');
 @import url('assets/fonts/Montserrat/Montserrat.css');
+@import url('assets/fonts/OpenSans/OpenSans.css');
 
 @media screen {
 	* {
@@ -99,14 +100,6 @@
 @media only screen and (min-width: 1200px) {
 }
 
-@font-face {
-  font-family: 'open_sans-regular';
-  src: url('assets/fonts/opensans-regular-webfont.woff2') format('woff2'),
-       url('assets/fonts/opensans-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -115,7 +108,7 @@
 
  body {
   font-size: 1em;
-  font-family: 'open_sans-regular', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'OpenSans', 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: var(--text);
   background-color: var(--background);
 }
@@ -215,7 +208,6 @@ a:hover {
 }
 
 p {
-  font-family: 'open_sans-regular';
   margin-bottom: 1.5em;
 }
 
