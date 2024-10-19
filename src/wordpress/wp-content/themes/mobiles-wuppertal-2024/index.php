@@ -61,6 +61,8 @@ get_header(); ?>
 				<?php get_template_part('post'); ?>
 
 			<?php endwhile; ?>
+		<?php else: ?>
+			<p><?php _e('Noch keine Inhalte.', 'wpblank'); ?></p>
 		<?php endif; ?>
 
 		<?php /* Pagination */ ?>
