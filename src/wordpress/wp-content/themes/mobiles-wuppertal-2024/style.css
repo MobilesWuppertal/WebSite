@@ -688,3 +688,87 @@ footer > div.right > nav > ul > li > a{
 .guidingprinciples .principleslist li::before:hovef {
   display: none;
 }
+
+@media screen and (max-width: 799px) {
+  .guidingprinciples {
+    flex-direction: column;
+  }
+
+  .guidingprinciples .devider {
+    display: none;
+  }
+
+  .guidingprinciples .principleslist {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .guidingprinciples .principleslist li {
+    position: relative;
+    width: unset;
+    border-bottom: 0 none;
+    border-left: 3px solid #2B9626;
+    text-align: left;
+  }
+
+  .guidingprinciples .principleslist li::before {
+    bottom: calc( 1em + 2px );
+    left: -8px;
+  }
+
+  .guidingprinciples .principleslist li:first-child::after {
+    position: absolute;
+    bottom: 0;
+    left: -9px;
+    right: unset;
+    width: 15px;
+    border-bottom: 3px solid #2B9626;
+    border-right: 0 none;
+  }
+
+  .guidingprinciples .principleslist li:last-child::after {
+    bottom: 0;
+    left: -9px;
+    right: unset;
+    width: 15px;
+    border-bottom: 3px solid #2B9626;
+    border-right: 0 none;
+  }
+
+  .guidingprinciples .principleslist li a {
+    display: flex;
+    padding: .5em 1em;
+  }
+
+  .guidingprinciples .principleslist li a .principle-name {
+    display: block;
+    position: relative;
+    bottom: unset;
+    left: unset;
+    width: 100%;
+    margin-left: 1em;
+    padding: unset;
+    box-shadow: unset;
+    background: none;
+    color: rgba(0, 0, 0, .3);
+  }
+
+  .guidingprinciples .principleslist li.active a .principle-name {
+    color: #000;
+  }
+
+  .guidingprinciples .principleslist li:active a .principle-name,
+  .guidingprinciples .principleslist li:focus a .principle-name,
+  .guidingprinciples .principleslist li:hover a .principle-name {
+    background: transparent;
+    color: #2B9626;
+  }
+
+  .guidingprinciples .principleslist li:hover a .principle-number {
+    position: relative;
+    width: auto;
+    padding: 0;
+    background: transparent;
+    color: #2B9626;
+  }
+}
