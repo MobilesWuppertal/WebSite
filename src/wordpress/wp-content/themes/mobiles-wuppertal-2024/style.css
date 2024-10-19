@@ -23,6 +23,7 @@
 }
 
 @import url('normalize.min.css');
+@import url('assets/fonts/Montserrat/Montserrat.css');
 
 @media screen {
 	* {
@@ -106,31 +107,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'montserrat-extrabold';
-  src: url('assets/fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
-       url('assets/fonts/montserrat-extrabold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserrat-italic';
-  src: url('assets/fonts/montserrat-italic-webfont.woff2') format('woff2'),
-       url('assets/fonts/montserrat-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'montserrat-semibold';
-  src: url('assets/fonts/montserrat-semibold-webfont.woff2') format('woff2'),
-       url('assets/fonts/montserrat-semibold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -158,7 +134,7 @@ hr{
   display: none;
 }
 
-.guidingprinciples {
+/*.guidingprinciples {
   margin-top: 20px;
   margin-bottom: 20px;
 
@@ -180,7 +156,7 @@ hr{
     }
 
   }
-}
+}*/
 
 article > div > ul {
   margin-left: 25px;
@@ -249,7 +225,7 @@ nav#sidebar-menu > ul > li > a {
 
 
 header > h1 {
-  font-family: 'montserrat-extrabold';
+  font-family: 'Montserrat', sans-serif;
   font-size: 3em;
   font-weight: 900;
   text-transform: uppercase;
@@ -259,7 +235,7 @@ header > h1 {
 }
 
 h2 {
-  font-family: 'montserrat-italic';
+  font-family: 'Montserrat', sans-serif;
   margin-top: -5px;
   margin-bottom: 5px;
   font-size: 2em;
@@ -339,7 +315,7 @@ header > div.right{
 }
 
 #sidebar-menu > ul > li > a.text-link{
-  font-family: 'montserrat-semibold';
+  font-family: 'Montserrat', sans-serif;
   margin: 0px 10px 0 10px;
   text-transform: uppercase;
   color: var(--pink);
@@ -556,7 +532,7 @@ footer > div.right > nav > ul > li > a{
   border-bottom: 3px solid #2B9626;
   background: transparent;
   color: #000;
-  font: 400 16px 'montserrat-semibold';
+  font: 600 16px 'Montserrat', sans-serif;
   text-transform: unset;
 }
 
@@ -596,6 +572,7 @@ footer > div.right > nav > ul > li > a{
   display: flex;
   margin-top: 10px;
   margin-left: -7px;
+  list-style: none;
 }
 
 .guidingprinciples .principleslist li::before {
