@@ -28,13 +28,6 @@
   <link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
   <link href="<?php echo get_template_directory_uri(); ?>/assets/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
 
-  <meta name="msapplication-square150x150logo" content="<?php echo get_template_directory_uri(); ?>/assets/msapplication-square-150.png">
-  <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/assets/msapplication-square-150.png">
-  <meta name="msapplication-TileColor" content="#FFF">
-  <meta name="application-name" content="<?php bloginfo('name'); ?>">
-
-  <link rel="pavatar" type="image/png" href="<?php echo get_template_directory_uri(); ?>/assets/pavatar.png">
-
   <link rel="alternate" type="application/atom+xml" title="<?php bloginfo('name'); ?>" href="<?php bloginfo('atom_url'); ?>">
 
 <?php wp_head(); ?>
