@@ -186,11 +186,16 @@ function mobwtal_guidingprinciples($postID) {
 		));
 ?>
 	<aside class="guidingprinciples">
-		<h1><?php _e('In unserem Leitbild', 'mobwtal'); ?></h1>
-		<ul>
+		<h1><a href="/leitbild"><?php _e('In unserem Leitbild →', 'mobwtal'); ?></a></h1>
+		<div class="devider"></div>
+		<ul class="principleslist">
 			<?php
 				foreach ($gp as $principle):
 					$is_current_principle = false;
+
+					$principle_name_parts	= explode('.', $principle->name);
+					$principle_number		= $principle_name_parts[0];
+					$principle_name			= $principle_name_parts[1];
 
 					foreach ($gp_post as $current_principle) {
 						if ( $current_principle->term_id === $principle->term_id ) {
@@ -198,7 +203,7 @@ function mobwtal_guidingprinciples($postID) {
 						}
 					}
 			?>
-				<li<?php if ( $is_current_principle ) { echo ' class="active"'; } ?>><a href="<?php echo get_term_link( $principle->slug, 'leitbild' ); ?>"><?php echo $principle->name; ?></a></li>
+				<li<?php if ( $is_current_principle ) { echo ' class="active"'; } ?>><a href="<?php echo get_term_link( $principle->slug, 'leitbild' ); ?>"><span class="principle-number"><?php echo $principle_number ?></span> <span class="principle-name"><?php echo $principle_name ?></span></a></li>
 			<?php
 				$is_current_principle = false;
 				endforeach;
