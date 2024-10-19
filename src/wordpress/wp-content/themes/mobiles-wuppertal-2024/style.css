@@ -437,22 +437,59 @@ label input:checked + .menu {
 
 /* Pagination */
 
-.pagination {
-  & > ul {
+.pagination::before {
+  content: ' ';
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--headline1);
+  background: linear-gradient(90deg, var(--headline1) 0%, var(--headline2) 37%, var(--light-pink) 60%, var(--pink) 100%);
+}
+
+.pagination .inner ul {
+  display: flex;
+  margin: 20px 0;
+  list-style: none;
+}
+
+.pagination .inner li {
+  width: 50%;
+  line-height: 1.5em;
+}
+
+.pagination .prev {
+  text-align: left;
+
+  ::before {
+    content: '← '
+  }
+}
+
+.pagination .next {
+  text-align: right;
+
+  ::after {
+    content: ' →'
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pagination .inner {
+    padding: 0 24px;
+  }
+
+  .pagination .inner ul {
+    flex-direction: column;
+  }
+
+  .pagination .inner li {
     width: 100%;
-    margin: 20px 0 0;
+  }
 
-    & > li {
-      list-style: none;
-      display: block;
-
-      &.prev {
-        float: left;
-      }
-      &.next {
-        float: right;
-      }
-    }
+  .pagination .inner .next {
+    border-top: 1px solid var(--headline2);
+    margin-top: 20px;
+    padding-top: 20px;
   }
 }
 
