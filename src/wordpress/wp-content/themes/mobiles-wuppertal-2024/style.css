@@ -525,12 +525,14 @@ label input:checked + .menu {
 
 .pagination .inner ul {
   display: flex;
+  justify-content: space-between;
   margin: 20px 0;
   list-style: none;
+  font: 500 1.1em 'Montserrat', sans-serif;
 }
 
 .pagination .inner li {
-  width: 50%;
+  width: 45%;
   line-height: 1.5em;
 }
 
@@ -548,6 +550,11 @@ label input:checked + .menu {
   ::after {
     content: ' →'
   }
+}
+
+.pagination a {
+  background: transparent;
+  color: var(--headline1);
 }
 
 @media screen and (max-width: 600px) {
@@ -787,7 +794,7 @@ body > footer .widget a:hover {
   bottom: 35px;
   left: 0;
   z-index: 10;
-  min-width: 108px;
+  min-width: 112px;
   padding: 8px 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, .2);
   background: var(--headline1);
@@ -795,6 +802,7 @@ body > footer .widget a:hover {
   color: #FFF;
   text-decoration: none;
   text-align: left;
+  letter-spacing: .025em;
 
   display: none;
 }
