@@ -19,6 +19,22 @@ get_header(); ?>
 
 			<h1><?php single_cat_title(); ?></h1>
 
+			<aside class="taxonomy-description">
+				<?php the_archive_description(); ?>
+			</aside>
+
+			<h2>Alle Inhalte dazu:</h2>
+
+		<?php elseif ( is_tax('leitbild') ): ?>
+
+			<h1><?php single_cat_title(); ?></h1>
+
+			<aside class="taxonomy-description">
+				<?php the_archive_description(); ?>
+			</aside>
+
+			<h2>Alle Inhalte dazu:</h2>
+
 		<?php elseif ( is_tag() ): ?>
 
 			<h1><?php _e('Tag', 'wpblank'); ?>: <?php single_tag_title(); ?></h1>
@@ -45,6 +61,8 @@ get_header(); ?>
 				<?php get_template_part('post'); ?>
 
 			<?php endwhile; ?>
+		<?php else: ?>
+			<p><?php _e('Noch keine Inhalte.', 'wpblank'); ?></p>
 		<?php endif; ?>
 
 		<?php /* Pagination */ ?>
@@ -65,7 +83,5 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

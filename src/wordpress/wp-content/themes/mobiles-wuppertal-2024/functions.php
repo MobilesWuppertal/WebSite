@@ -168,3 +168,50 @@ function wpblank_wrong_login() {
 	return 'Wrong username or password.';
 }
 add_filter('login_errors', 'wpblank_wrong_login');
+
+/**
+ * Generate snippet for the guided principals of a post.
+ * @param int	$postID	ID of the post.
+ * @since mobwtal 1.0.0
+ */
+function mobwtal_guidingprinciples($postID) {
+	if ( taxonomy_exists( 'leitbild' ) ):
+		// Get guiding principles of post
+		$gp_post = get_the_terms( $postID, 'leitbild' );
+
+		if ( $gp_post ):
+			// Get all guiding principles
+			$gp = get_terms( array(
+				'taxonomy'		=> 'leitbild',
+				'hide_empty'	=> false,
+			));
+	?>
+		<aside class="guidingprinciples">
+			<h1><a href="/leitbild"><?php _e('In unserem Leitbild →', 'mobwtal'); ?></a></h1>
+			<div class="devider"></div>
+			<ul class="principleslist">
+				<?php
+					foreach ($gp as $principle):
+						$is_current_principle = false;
+
+						$principle_name_parts	= explode('.', $principle->name);
+						$principle_number		= $principle_name_parts[0];
+						$principle_name			= $principle_name_parts[1];
+
+						foreach ($gp_post as $current_principle) {
+							if ( $current_principle->term_id === $principle->term_id ) {
+								$is_current_principle = true;
+							}
+						}
+				?>
+					<li<?php if ( $is_current_principle ) { echo ' class="active"'; } ?>><a href="<?php echo get_term_link( $principle->slug, 'leitbild' ); ?>"><span class="principle-number"><?php echo $principle_number ?></span> <span class="principle-name"><?php echo $principle_name ?></span></a></li>
+				<?php
+					$is_current_principle = false;
+					endforeach;
+				?>
+			</ul>
+		</aside>
+	<?php
+		endif;
+	endif;
+}
